@@ -7,9 +7,27 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 
 class ArticleService {
-    func fetchNews(completion: @escaping (Result<[Article], Error>) -> Void) {
+    
+    func fetchNews() -> Observable<[Article]> {
+        return Observable.create { observer in
+            
+            self.fetchNews { result in
+                switch result {
+                case .success(let articles):
+                    observer.onNext(articles)
+                    observer.onCompleted()
+                case .failure(let error):
+                    observer.onError(error)
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
+    private func fetchNews(completion: @escaping (Result<[Article], Error>) -> Void) {
         let urlString = "https://newsapi.org/v2/everything"
         
         let param = [
