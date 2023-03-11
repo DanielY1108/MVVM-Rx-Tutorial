@@ -9,7 +9,11 @@ import Foundation
 import Alamofire
 import RxSwift
 
-class ArticleService {
+protocol ArticleServiceProtocol {
+    func fetchNews() -> Observable<[Article]>
+}
+
+class ArticleService: ArticleServiceProtocol {
     
     func fetchNews() -> Observable<[Article]> {
         return Observable.create { observer in
@@ -35,15 +39,15 @@ class ArticleService {
             "sortBy" : "publishedAt",
             "apiKey" : "bc83fae28aeb4e07ab75f770c6b23bb6"
         ]
-        
+       
         AF.request(urlString,
                    method: HTTPMethod.get,
                    parameters: param,
-                   encoding: JSONEncoding.default)
+                   encoding: URLEncoding.default)
         .responseDecodable(of: ArticleResponse.self) { response in
             switch response.result {
             case .success(let data):
-                completion(.success(data.Article))
+                completion(.success(data.articles))
             case .failure(let error):
                 completion(.failure(error))
             }

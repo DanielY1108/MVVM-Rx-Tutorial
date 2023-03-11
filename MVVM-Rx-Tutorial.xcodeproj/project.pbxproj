@@ -20,6 +20,9 @@
 		6550715929AF1C3600C8E67D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6550715829AF1C3600C8E67D /* SDWebImage */; };
 		6550715C29AF1D6200C8E67D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6550715B29AF1D6200C8E67D /* Article.swift */; };
 		6550715F29AF1EBB00C8E67D /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6550715E29AF1EBB00C8E67D /* ArticleService.swift */; };
+		6550716229AF2B9D00C8E67D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6550716129AF2B9D00C8E67D /* MainViewModel.swift */; };
+		6550716429AF3C4400C8E67D /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6550716329AF3C4400C8E67D /* ArticleViewModel.swift */; };
+		6585595929BC66A7007F5562 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6585595829BC66A7007F5562 /* ArticleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		6550714C29AF19DB00C8E67D /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		6550715B29AF1D6200C8E67D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		6550715E29AF1EBB00C8E67D /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		6550716129AF2B9D00C8E67D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6550716329AF3C4400C8E67D /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		6585595829BC66A7007F5562 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,16 +76,18 @@
 		6550713229AF15FF00C8E67D /* MVVM-Rx-Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				6550715D29AF1EA200C8E67D /* Services */,
-				6550715A29AF1D4B00C8E67D /* Models */,
-				6550714729AF166800C8E67D /* Constrollers */,
-				6550714E29AF19E600C8E67D /* Extensions */,
 				6550713329AF15FF00C8E67D /* AppDelegate.swift */,
 				6550713529AF15FF00C8E67D /* SceneDelegate.swift */,
 				6550713C29AF160000C8E67D /* Assets.xcassets */,
 				6550713E29AF160000C8E67D /* LaunchScreen.storyboard */,
 				6550714129AF160000C8E67D /* Info.plist */,
 				6550714A29AF17D100C8E67D /* Coordinator.swift */,
+				6550715D29AF1EA200C8E67D /* Services */,
+				6550715A29AF1D4B00C8E67D /* Models */,
+				6585595729BC6688007F5562 /* Views */,
+				6550716029AF2B4500C8E67D /* ViewModels */,
+				6550714729AF166800C8E67D /* Constrollers */,
+				6550714E29AF19E600C8E67D /* Extensions */,
 			);
 			path = "MVVM-Rx-Tutorial";
 			sourceTree = "<group>";
@@ -114,6 +122,23 @@
 				6550715E29AF1EBB00C8E67D /* ArticleService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		6550716029AF2B4500C8E67D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6550716129AF2B9D00C8E67D /* MainViewModel.swift */,
+				6550716329AF3C4400C8E67D /* ArticleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6585595729BC6688007F5562 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6585595829BC66A7007F5562 /* ArticleCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +228,10 @@
 				6550715F29AF1EBB00C8E67D /* ArticleService.swift in Sources */,
 				6550713429AF15FF00C8E67D /* AppDelegate.swift in Sources */,
 				6550715C29AF1D6200C8E67D /* Article.swift in Sources */,
+				6550716429AF3C4400C8E67D /* ArticleViewModel.swift in Sources */,
 				6550713629AF15FF00C8E67D /* SceneDelegate.swift in Sources */,
+				6585595929BC66A7007F5562 /* ArticleCell.swift in Sources */,
+				6550716229AF2B9D00C8E67D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

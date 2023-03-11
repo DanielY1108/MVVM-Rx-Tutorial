@@ -15,7 +15,7 @@ class Coordinator {
     }
     
     func start() {
-        let mainViewController = MainViewController()
+        let mainViewController = MainViewController(viewModel: MainViewModel(ariticleServise: ArticleService()))
         let navigationController = UINavigationController(rootViewController: mainViewController)
         navigationController.setupNavigationBarAppearance()
     
